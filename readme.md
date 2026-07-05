@@ -10,43 +10,6 @@ author:fictional-broccoli
 
 ---
 
-# 環境の移行・共有方法（別マシンで使う場合）
-
-Python環境が整っている別のPCへプログラムを移行・共有する場合は、不要なファイルを省いて配布し、以下の手順でセットアップと実行を行います。
-
-### 1. 配布用ファイルの作成（開発者側）
-プロジェクトのルートディレクトリで **PowerShell** を開き、以下のコマンドを実行して必要なソースコードと設定ファイルだけを1発でzipにまとめます。
-（これにより、重い `.venv` やビルド成果物の `dist` を自動で除外します）
-
-```powershell
-Compress-Archive -Path "src", "config", "images", "requirements.txt" -DestinationPath "./getPokemonStatus_source.zip" -Force
-```
-
-### 2. 移行先でのセットアップと動作確認（利用者側）
-
-1. 作成された `getPokemonStatus_source.zip` を移行先PCにコピーし、任意の場所に**すべて展開**します。
-2. 展開したフォルダ内（`src` や `config` が見えている階層）で **PowerShell** を開きます。
-3. Windowsのセキュリティ制限により仮想環境の起動（スクリプト実行）がブロックされるのを防ぐため、まず以下のコマンドを実行して**今開いているPowerShell内だけ一時的に実行を許可**します。
-   ```powershell
-   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-   ```
-4. 以下のコマンドを順番に実行して、環境構築とプログラムの起動確認を行います。
-   ```powershell
-   # 仮想環境の作成
-   python -m venv .venv
-
-   # 仮想環境の起動（アクティベート）
-   .venv\Scripts\Activate.ps1
-
-   # 必要なライブラリの一括インストール
-   pip install -r requirements.txt
-
-   # プログラムの実行
-   python src/main.py
-   ```
-
----
-
 # 現在の仕様
 
 ## 実行方法
