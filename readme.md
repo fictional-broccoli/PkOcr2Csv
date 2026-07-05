@@ -1,4 +1,4 @@
-# Pokémon Champions OCR Manager
+# Champions OCR Manager
 author:fictional-broccoli
 
 ## プロジェクト概要
