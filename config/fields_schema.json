@@ -1,0 +1,103 @@
+{
+    "hp": {
+        "type": "status",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "hp_effort": {
+        "type": "effort",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "attack": {
+        "type": "status",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "attack_effort": {
+        "type": "effort",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "defense": {
+        "type": "status",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "defense_effort": {
+        "type": "effort",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "sp_attack": {
+        "type": "status",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "sp_attack_effort": {
+        "type": "effort",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "sp_defense": {
+        "type": "status",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "sp_defense_effort": {
+        "type": "effort",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "speed": {
+        "type": "status",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "speed_effort": {
+        "type": "effort",
+        "min_len": 2,
+        "max_len": 3
+    },
+    "nature": {
+        "type": "hiragana_katakana",
+        "min_len": 2,
+        "max_len": 6
+    },
+    "name": {
+        "type": "hiragana_katakana"
+    },
+    "nickname": {
+        "type": "any_text"
+    },
+    "type": {
+        "type": "hiragana_katakana",
+        "min_len": 2,
+        "max_len": 8
+    },
+    "moves1": {
+        "type": "hiragana_katakana",
+        "min_len": 3,
+        "max_len": 7
+    },
+    "moves2": {
+        "type": "hiragana_katakana",
+        "min_len": 3,
+        "max_len": 7
+    },
+    "moves3": {
+        "type": "hiragana_katakana",
+        "min_len": 3,
+        "max_len": 7
+    },
+    "moves4": {
+        "type": "hiragana_katakana",
+        "min_len": 3,
+        "max_len": 7
+    },
+    "ability": {
+        "type": "hiragana_katakana",
+        "min_len": 3,
+        "max_len": 9
+    }
+}
